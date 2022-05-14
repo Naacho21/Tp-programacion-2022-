@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1650140554 source:c:\users\ignac\onedrive\escritorio\cosas de la facu\proyectos codebloks\tp.prog\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"calculos.h"
+
+1650140462 source:c:\users\ignac\onedrive\escritorio\cosas de la facu\proyectos codebloks\tp.prog\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1650140554 c:\users\ignac\onedrive\escritorio\cosas de la facu\proyectos codebloks\tp.prog\menu.h
+	"menu.c"
+
+1650141605 c:\users\ignac\onedrive\escritorio\cosas de la facu\proyectos codebloks\tp.prog\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"calculos.h"
+
+1650136815 c:\users\ignac\onedrive\escritorio\cosas de la facu\proyectos codebloks\tp.prog\calculos.h
+	"calculos.c"
+
+1650139899 c:\users\ignac\onedrive\escritorio\cosas de la facu\proyectos codebloks\tp.prog\calculos.c
+	<stdio.h>
+	<stdlib.h>
+	"calculos.h"
+

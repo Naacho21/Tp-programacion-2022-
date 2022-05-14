@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1652498886 source:c:\users\ignac\onedrive\escritorio\cosas de la facu\proyectos codebloks\tp numero 2\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"pasajeros.h"
+	"menu.h"
+
+1652498930 source:c:\users\ignac\onedrive\escritorio\cosas de la facu\proyectos codebloks\tp numero 2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+	"pasajeros.h"
+
+1652497357 c:\users\ignac\onedrive\escritorio\cosas de la facu\proyectos codebloks\tp numero 2\menu.h
+	"pasajeros.h"
+	"string.h"
+
+1652497036 c:\users\ignac\onedrive\escritorio\cosas de la facu\proyectos codebloks\tp numero 2\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"pasajeros.h"
+
+1652497358 c:\users\ignac\onedrive\escritorio\cosas de la facu\proyectos codebloks\tp numero 2\pasajeros.h
+
+1652497311 source:c:\users\ignac\onedrive\escritorio\cosas de la facu\proyectos codebloks\tp numero 2\pasajeros.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+	"pasajeros.h"
+
