@@ -20,8 +20,11 @@ typedef struct
 
 }ePassenger;
 
+int listarPasajeros(LinkedList* pArrayListPassenger);
+void mostrarPasajeros(ePassenger pasajeros);
+
 Passenger* Passenger_new();
-Passenger* Passenger_newParametros(char* idStr,char* nombreStr,char* tipoPasajeroStr);
+Passenger* Passenger_newParametros(char* idStr, char* nombreStr, char* tipoPasajeroStr);
 void Passenger_delete();
 
 int Passenger_setId(ePassenger* aux,int id);

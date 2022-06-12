@@ -2,7 +2,7 @@
  * estadoVuelo.c
  *
  *  Created on: 9 jun. 2022
- *      Author: ignac
+ *      Author: ignacio
  */
 
 #include <stdio.h>
@@ -21,7 +21,7 @@ eEstadoVuelo inicializarEstadoVuelo(void)
 	return estadoVueloEstructura;
 }
 
-int parsearEstadoVueloPasajeroDesdeEstrutura(char estadoVuelo[], ePassanger pasajero, eEstadoVuelo estadoVueloEstructura)
+int parsearPasajeroEstadoVueloDesdeEstrutura(char estadoVuelo[], ePassenger pasajero, eEstadoVuelo estadoVueloEstructura)
 {
     int retorno = 0;
 

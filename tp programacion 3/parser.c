@@ -22,9 +22,9 @@ int parser_PassengerFromText(FILE* pArchivo, LinkedList* pArrayListPassenger)
 
 	    ePassenger pasajero;
 
-	    int numeroScanf[50];
 
-	    numeroScanf = fscanf(pArchivo,"%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^\n]/n",id,nombre,apellido,precio,codigoVuelo,tipoPasajero,estadoVuelo);
+
+	 fscanf(pArchivo,"%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^\n]/n",id,nombre,apellido,precio,codigoVuelo,tipoPasajero,estadoVuelo);
 	    if(numeroScanf == 7)
 	    {
 	        pasajero.id = atoi(id);

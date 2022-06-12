@@ -2,7 +2,7 @@
  * tipoPasajero.h
  *
  *  Created on: 8 jun. 2022
- *      Author: ignac
+ *      Author: ignacio
  */
 
 #ifndef TIPOPASAJERO_H_

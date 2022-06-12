@@ -2,7 +2,7 @@
  * tipoPasajero.c
  *
  *  Created on: 8 jun. 2022
- *      Author: ignac
+ *      Author: ignacio
  */
 
 #include <stdio.h>

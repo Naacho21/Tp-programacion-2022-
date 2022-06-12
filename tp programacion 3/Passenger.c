@@ -2,12 +2,37 @@
  * Passenger.c
  *
  *  Created on: 19 may. 2022
- *      Author: Maru
+ *      Author: ignacio
  */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include "Passenger.h"
+
+int listarPasajeros(LinkedList* pArrayListPassenger)
+{
+    int retorno = 0;
+    ePassenger pasajeros;
+
+    if(pasajeros != NULL)
+    {
+        system("cls");
+        printf("          *** Lista de Pasajeros ***\n\n");
+        printf(" ID      Nombre     Apellido     Precio     tipo de Pasajero    Codigo de Vuelo   Estado de Vuelo  \n");
+        printf("-----------------------------------------------------------------------------------------------------\n");
+
+
+
+
+
+void mostrarPasajeros(ePassenger pasajeros)
+{
+	ePassenger aux;
+
+   printf("  %4d       %s       %s      %d    %s    %s   %s\n", aux.id, aux.nombre, aux.apellido, aux.precio, aux.tipoPasajero,
+		     aux.codigoVuelo, aux.estadoVuelo);
+
+}
 
 
 int Passenger_setId(ePassenger* aux, int id)
