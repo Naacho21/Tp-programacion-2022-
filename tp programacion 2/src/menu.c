@@ -46,8 +46,9 @@ int altaPasajero(ePasajeros pasajerosLista[],int TAM, int* id)
     char codigoDeVuelo[10];
     int estadoVuelo;
     int todoOk = 0;
-    int indice;
-    int libre;
+    int indice = 0;
+    char libre;
+
 
     libre = obtenerPasajeroLibre(pasajerosLista, TAM);
 
@@ -66,28 +67,28 @@ int altaPasajero(ePasajeros pasajerosLista[],int TAM, int* id)
             {
                 printf("Ingrese el nombre del pasajero: ");
                 fflush(stdin);
-                scanf("%s", &nombre);
+                scanf("%s", nombre);
 
                     while(strlen(nombre) > 51)
                     {
                         printf("Nombre demasiado largo. Reingrese el nombre del pasajero: ");
                         fflush(stdin);
-                        scanf("%s", &nombre);
+                        scanf("%s", nombre);
                     }
 
                 printf("Ingrese el apellido del pasajero: ");
                 fflush(stdin);
-                scanf("%s", &apellido);
+                scanf("%s", apellido);
 
                     while(strlen(apellido) > 51)
                     {
                         printf("Apellido demasiado largo. Reingrese el apellido del pasajero: ");
                         fflush(stdin);
-                        scanf("%s", &apellido);
+                        scanf("%s", apellido);
                     }
 
                 printf("Ingrese el precio del vuelo: ");
-                scanf("%d", &precio);
+                scanf("%f", &precio);
 
 
                 printf("Ingrese el tipo de pasajero: ");
@@ -95,23 +96,23 @@ int altaPasajero(ePasajeros pasajerosLista[],int TAM, int* id)
 
                 printf("Ingrese el codigo de vuelo correspondiente: ");
                 fflush(stdin);
-                scanf("%s", &codigoDeVuelo);
+                scanf("%s", codigoDeVuelo);
 
                      while(strlen(codigoDeVuelo) > 10)
                     {
                         printf("Codigo de vuelo incorrecto. Reingrese el codigo de vuelo correspondiente: ");
                         fflush(stdin);
-                        scanf("%s", &codigoDeVuelo);
+                        scanf("%s", codigoDeVuelo);
                     }
 
                printf("Ingrese el estado de vuelo: ");
                scanf("%d", &estadoVuelo);
 
-                strcpy(pasajerosLista[indice].name, &nombre);
-                strcpy(pasajerosLista[indice].lastName, &apellido);
+                strcpy(pasajerosLista[indice].name, nombre);
+                strcpy(pasajerosLista[indice].lastName, apellido);
                 pasajerosLista[indice].price = precio;
                 pasajerosLista[indice].typePassenger = tipoDePasajero;
-                strcpy(pasajerosLista[indice].flycode, &codigoDeVuelo);
+                strcpy(pasajerosLista[indice].flycode, codigoDeVuelo);
                 pasajerosLista[indice].statusFlight = estadoVuelo;
                 pasajerosLista[indice].isEmpty = 1;
 
@@ -131,7 +132,6 @@ int modificarPasajeroS(ePasajeros pasajerosLista[], int TAM)
     int i;
     int salir = 'n';
     int idPasajeroMod;
-    int opcionElegida;
 
     if(pasajerosLista != NULL && TAM > 0)
     {
@@ -165,7 +165,7 @@ int modificarPasajeroS(ePasajeros pasajerosLista[], int TAM)
                                 break;
 
                         case 3: printf("Ingrese el nuevo precio: ");
-                                scanf("%f", pasajerosLista[i].price);
+                                scanf("%f", &(pasajerosLista[i].price));
                                 break;
 
                         case 4: printf("Ingrese el nuevo codigo de vuelo: ");
@@ -174,11 +174,12 @@ int modificarPasajeroS(ePasajeros pasajerosLista[], int TAM)
                                 break;
 
                         case 5: printf("Ingrese el nuevo tipo de pasajero: ");
-                                scanf("%d", pasajerosLista[i].typePassenger);
+                        		fflush(stdin);
+                                scanf("%d", &(pasajerosLista[i].typePassenger));
                                 break;
 
                         case 6: printf("Ingrese el nuevo estado de vuelo: ");
-                                scanf("%d", pasajerosLista[i].statusFlight);
+                                scanf("%d", &(pasajerosLista[i].statusFlight));
                                 break;
 
                         case 7: salir = 's';
@@ -213,11 +214,11 @@ int bajaPasajeros(ePasajeros pasajerosLista[], int TAM)
             printf("Ingrese el ID del pasajero que desea dar de baja: \n");
             scanf("%d", &idIngresado);
 
-            if(buscarPasajeros(pasajerosLista, TAM, idIngresado, &indice))
+            if(buscarPasajeros(pasajerosLista, TAM, idIngresado, indice))
             {
                 if(indice == -1)
                 {
-                    printf("No hay un pasajero con ID %d\n", &idIngresado);
+                    printf("No hay un pasajero con ID %d\n", idIngresado);
                 }
                 else
                 {
@@ -225,7 +226,7 @@ int bajaPasajeros(ePasajeros pasajerosLista[], int TAM)
                     printf("Confirmar baja del pasajero?\n");
                     fflush(stdin);
                     scanf("%c", &confirmar);
-                    if(confirmar = 's')
+                    if(confirmar == 's')
                     {
                         printf("La baja ha sido cancelada\n");
                     }

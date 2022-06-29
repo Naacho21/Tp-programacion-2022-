@@ -17,6 +17,8 @@
 
 int main()
 {
+	setbuf(stdout, NULL);
+
     ePasajeros pasajerosLista[TAM];
     int id = 0;
     int eleccionMenu;
@@ -27,7 +29,7 @@ int main()
        eleccionMenu = menu();
        switch(eleccionMenu)
        {
-           case 1: if(altaPasajero(pasajerosLista, TAM, &id))
+           case 1: if(altaPasajero(pasajerosLista, TAM, id))
                     {
                         printf("Pasajero agregado con exito!.\n\n");
                     }
@@ -45,7 +47,7 @@ int main()
                     {
                         printf("Ha ocurrido un error al intentar modificar al pasajero.\n\n");
                     }
-
+           	   break;
 
            case 3: if(bajaPasajeros(pasajerosLista, TAM))
                     {
